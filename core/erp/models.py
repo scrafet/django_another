@@ -2,6 +2,8 @@ from datetime import datetime
 
 from django.db import models
 
+from core.erp.choises import gender_choices
+
 
 # Create your models here.
 class Type(models.Model):
