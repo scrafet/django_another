@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from core.erp.models import Category
+from core.erp.models import Category, Product
 
 
 # Create your views here.
@@ -16,6 +16,6 @@ def myfirstview(request):
 def mysecondview(request):
     data = {
         'name': 'William',
-        'categories': Products.objects.all()
+        'productos': Product.objects.all()
     }
     return render(request, 'index.html', data)
