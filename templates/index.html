@@ -1,23 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<h1>MI PRIMERA PAGINA WEB</h1>
+{% extends 'home.html' %}
 
 {% block content %}
-    <ul>
-        {% for category in categories %}
-            <li>{{ category.id }} / {{ category.name }}</li>
-        {% endfor %}
-    </ul>
+    <p>Hola</p>
 {% endblock %}
 
-
-<body>
-
-
-<p>{{ name }}</p>
-</body>
-</html>
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<h1>MI PRIMERA PAGINA WEB</h1>#}
+{##}
+{#{% block content %}#}
+{##}
+{#    <ul>#}
+{#        {% for category in categories %}#}
+{#            <li>{{ category.id }} / {{ category.name }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#{% endblock %}#}
+{##}
+{##}
+{#<body>#}
+{##}
+{##}
+{#<p>{{ name }}</p>#}
+{#</body>#}
+{#</html>#}
