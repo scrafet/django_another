@@ -1,0 +1,61 @@
+{% extends 'body.html' %}
+{% load static %}
+{% block head %}
+        <link rel="stylesheet" href="{% static 'lib/DataTables-1.13.8/css/dataTables.bootstrap4.min.css.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'lib/DataTables-1.13.8/plugins/Responsive-2.5.0/css/responsive.bootstrap4.min.css' %}"/>
+
+        <script src="{% static 'lib/DataTables-1.13.8/js/jquery.dataTables.js' %}"></script>
+        <script src="{% static 'lib/DataTables-1.13.8/js/dataTables.bootstrap4.min.js' %}"></script>
+        <script src="{% static 'lib/DataTables-1.13.8/plugins/Responsive-2.5.0/js/dataTables.responsive.min.js' %}"></script>
+        <script src="{% static 'lib/DataTables-1.13.8/plugins/Responsive-2.5.0/js/responsive.bootstrap4.min.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="card card-default">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="fas fa-search"></i>
+                {{ title }}
+            </h3>
+        </div>
+
+        <div class="card-body">
+
+        </div>
+        <table class="table" id="data">
+            <thead>
+
+            {% block columns %}
+
+            {% endblock %}
+
+            </thead>
+            <tbody>
+
+            {% block rows %}
+
+            {% endblock %}
+
+            </tbody>
+        </table>
+        {#Agregamos un footer  dentro del card para el boton de agregar#}
+        <div class="card-footer">
+            <button class="btn btn-primary btn-flat">
+                <i class="fa fa-plus">Nuevo Registro</i>
+            </button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        $(document).ready(function () {
+            $('#data').DataTable();
+        });
+    </script>
+{% endblock %}

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Top Navigation</title>
+    <title>{{ title }}</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -14,23 +14,29 @@
     <link rel="stylesheet" href="{% static 'lib/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css' %}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{% static 'lib/AdminLTE-3.2.0/dist/css/adminlte.css' %}">
+    <!-- block head (para importar librerias en plantillas hijas) -->
     {% block head %}
 
     {% endblock %}
 </head>
-    {% block body %}
+{% block body %}
 
-    {% endblock %}
+{% endblock %}
 
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="{% static 'lib/AdminLTE-3.2.0/plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'lib/AdminLTE-3.2.0/plugins/jquery/jquery.min.js' %}"></script>
 <!-- Bootstrap 4 -->
 <script src="{% static 'lib/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.js' %}"></script>
 <!-- AdminLTE App -->
 <script src="{% static 'lib/AdminLTE-3.2.0/dist/js/adminlte.min.js' %}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{% static 'lib/AdminLTE-3.2.0/js/demo.js' %}"></script>
+<!-- Block  Javascrript-->
+{% block javascript %}
+
+{% endblock %}
+
 </body>
 </html>
